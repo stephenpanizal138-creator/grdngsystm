@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Average Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Modal Overlay -->
+    <div id="modalOverlay" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Logo Header -->
+        <div class="logo-header">
+            <svg class="logo" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#007bff;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#28a745;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <rect width="200" height="60" rx="10" fill="url(#grad)"/>
+                <text x="100" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">GradeCalc</text>
+                <text x="100" y="50" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.9)" text-anchor="middle">Average Calculator</text>
+            </svg>
+        </div>
+        
+        <h1>Subject Average Calculator</h1>
+        
+        <!-- Student Info -->
+        <div class="student-info">
+            <h2>Student Information</h2>
+            <input type="text" id="studentName" placeholder="Enter Student Name">
+            <input type="text" id="course" placeholder="Enter Course">
+            <input type="text" id="section" placeholder="Enter Section">
+        </div>
+        
+        <!-- Realtime Preview -->
+        <div class="preview" id="preview">
+            <h3>Live Average Preview: <span id="liveAverage">--</span></h3>
+        </div>
+        
+        <!-- Subjects Container -->
+        <div class="subjects-container">
+            <h2>Subjects</h2>
+            <button id="addSubjectBtn">+ Add Subject</button>
+            <div id="subjectsList"></div>
+        </div>
+        
+        <!-- Controls -->
+        <div class="controls">
+            <button id="calculateBtn">Calculate Average</button>
+            <button id="saveBtn">Save Record</button>
+            <button id="viewRecordsBtn">View Records</button>
+            <button id="darkModeBtn">🌙 Dark Mode</button>
+            <button id="clearBtn">Clear All</button>
+        </div>
+        
+        <!-- Saved Records -->
+        <div class="saved-records" id="savedRecords" style="display: none;">
+            <h2>Saved Records</h2>
+            <div id="recordsList"></div>
+        </div>
+        
+        <!-- Results -->
+        <div class="results" id="results" style="display: none;">
+            <h2>Results</h2>
+            <div id="averageDisplay"></div>
+            <div id="letterGrade"></div>
+            <div id="status"></div>
+            <div id="gradesDisplay"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

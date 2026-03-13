@@ -1,0 +1,393 @@
+/* Existing styles + improvements */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.dark-theme body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.dark-theme .container {
+    background: #2d2d2d;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+.logo-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+    animation: fadeIn 1s ease-in;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.dark-theme h1, .dark-theme h2, .dark-theme h3 {
+    color: #e0e0e0;
+}
+
+.student-info {
+    margin-bottom: 30px;
+}
+
+.student-info input {
+    width: 30%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.student-info input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.dark-theme .student-info input {
+    background: #3d3d3d;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+.preview {
+    background: #e9f5ff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-left: 4px solid #007bff;
+}
+
+.dark-theme .preview {
+    background: #1e3a5f;
+}
+
+#liveAverage {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.subject-item {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-left: 4px solid #007bff;
+    animation: fadeInUp 0.5s ease;
+    transition: transform 0.2s;
+}
+
+.subject-item:hover {
+    transform: translateY(-2px);
+}
+
+.dark-theme .subject-item {
+    background: #3d3d3d;
+}
+
+.subject-item label {
+    font-weight: bold;
+    color: #555;
+}
+
+.dark-theme .subject-item label {
+    color: #ccc;
+}
+
+.subject-item input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100px;
+    margin-left: 10px;
+    transition: all 0.3s;
+}
+
+.subject-item input:focus {
+    border-color: #28a745;
+}
+
+.subject-item input:invalid {
+    border-color: #dc3545;
+}
+
+.dark-theme .subject-item input {
+    background: #4d4d4d;
+    color: #e0e0e0;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.3s;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+#addSubjectBtn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+#addSubjectBtn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.controls button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.controls button:hover {
+    background: #0056b3;
+    transform: scale(1.02);
+}
+
+#saveBtn {
+    background: #17a2b8;
+}
+
+#saveBtn:hover {
+    background: #138496;
+}
+
+#viewRecordsBtn {
+    background: #6f42c1;
+}
+
+#viewRecordsBtn:hover {
+    background: #5a32a3;
+}
+
+#darkModeBtn {
+    background: #ffc107;
+    color: #212529;
+}
+
+#darkModeBtn:hover {
+    background: #e0a800;
+}
+
+#clearBtn {
+    background: #dc3545;
+}
+
+#clearBtn:hover {
+    background: #c82333;
+}
+
+#calculateBtn {
+    background: #28a745;
+    font-size: 18px;
+    padding: 15px 30px;
+}
+
+#calculateBtn:hover {
+    background: #218838;
+}
+
+.saved-records {
+    margin: 20px 0;
+    padding: 15px;
+    background: #fff3cd;
+    border-radius: 5px;
+    border-left: 4px solid #ffc107;
+}
+
+.dark-theme .saved-records {
+    background: #4a3f1a;
+}
+
+.record-item {
+    padding: 10px;
+    margin: 5px 0;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dark-theme .record-item {
+    background: #4d4d4d;
+}
+
+.record-item:hover {
+    background: #f0f0f0;
+}
+
+.dark-theme .record-item:hover {
+    background: #555;
+}
+
+.results {
+    margin-top: 30px;
+    padding: 20px;
+    background: #d4edda;
+    border-radius: 5px;
+    border: 1px solid #c3e6cb;
+    animation: fadeIn 0.8s ease;
+}
+
+.dark-theme .results {
+    background: #2d5a3a;
+    border-color: #4a9a5e;
+}
+
+#averageDisplay {
+    font-size: 24px;
+    font-weight: bold;
+    color: #155724;
+    margin-bottom: 10px;
+}
+
+#letterGrade {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.grade-A { color: #28a745; }
+.grade-B { color: #007bff; }
+.grade-C { color: #ffc107; }
+.grade-D { color: #fd7e14; }
+.grade-F { color: #dc3545; }
+
+#status {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.pass { color: #28a745; }
+.fail { color: #dc3545; }
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.dark-theme .modal-content {
+    background: #2d2d2d;
+    color: #e0e0e0;
+}
+
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .student-info input {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .logo {
+        max-width: 150px;
+    }
+    
+    .controls {
+        flex-direction: column;
+    }
+    
+    .controls button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
